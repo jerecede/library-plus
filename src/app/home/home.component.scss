@@ -1,0 +1,13 @@
+.results{
+    display: grid;
+    column-gap: 14px;
+    row-gap: 14px;
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+@media (min-height: 300px){
+    .results{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
