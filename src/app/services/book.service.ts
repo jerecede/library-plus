@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Book } from './book';
+import { Book } from '../model/book';
+import { Author } from '../model/author';
+import { subscriptionLogsToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 @Injectable({
   providedIn: 'root'
@@ -155,5 +157,9 @@ export class BookService {
 
   getBookById(id: number): Book | undefined{
     return this.books.find((book) => book.id === id);
+  }
+
+  submitBook(title: string, author: string, image: string, summary: string, subject: string){
+    console.log(`titolo: ${title}, autore: ${author}, riassunto: ${summary}, genere: ${subject}, url immagine: ${image}`)
   }
 }

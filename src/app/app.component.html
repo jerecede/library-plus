@@ -1,2 +1,9 @@
-<app-home></app-home>
-<router-outlet />
+<main>
+    <a [routerLink]="['/']">
+        home
+    </a>
+    <a [routerLink]="['/addbook']">
+        add book
+    </a>
+    <section class="content"> <router-outlet></router-outlet> </section>
+</main>
